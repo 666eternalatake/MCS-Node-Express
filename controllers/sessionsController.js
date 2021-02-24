@@ -17,7 +17,7 @@ export class SessionsController extends ApplicationController {
         console.log(valid)
         if (!valid) {
           req.flash('data', {warning: "Email and/or password is incorrect!"})
-          res.redirect('/sessions/new')
+          return res.redirect('/sessions/new')
         }
         req.flash('data', {success: "Welcome!"})
         req.session.user = user
