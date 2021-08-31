@@ -22,7 +22,7 @@ export function setupAssets(app, express) {
 
   hbs.registerHelper("when", function(operand_1, operator, operand_2, options) {
     const operators = {
-     'eqObj': function(l,r) { return l.toString() === r.toString() }
+    'eqObj': function(l,r) { return l === r }
     }
     const result = operators[operator](operand_1,operand_2)
   
